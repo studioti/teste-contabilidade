@@ -38,6 +38,12 @@ PAGES
                     font-size: 1.3rem;
                     color: variables.$patternColor1;
 
+                    @media screen {
+                        @media (max-width: 640px) {
+                            font-size: 1.2rem;
+                        }
+                    }
+
                     span {
                         align-items: flex-end;
                     }
@@ -72,6 +78,12 @@ PAGES
 
     .flex {
         padding: 30px 0;
+
+        @media screen {
+            @media (max-width: 640px) {
+                padding: 20px 0;
+            }
+        }
 
         span {
             display: flex;

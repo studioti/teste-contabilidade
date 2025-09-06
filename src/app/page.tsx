@@ -1,7 +1,8 @@
 import Link from "next/link";
 import "@/app/styles/scss/page.scss";
+import { memo } from "react";
 
-export default function Home() {
+const Home = () => {
 	return (
 		<>
 			<section className="content-center page">
@@ -117,3 +118,5 @@ export default function Home() {
 		</>
 	)
 }
+
+export default memo(Home)

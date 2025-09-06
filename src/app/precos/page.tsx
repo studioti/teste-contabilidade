@@ -1,7 +1,8 @@
 import Link from "next/link";
 import "@/app/styles/scss/precos.scss";
+import { memo } from "react";
 
-export default function Precos() {
+const Precos = () => {
 	return (
 		<>
 			<section className="content-center precos">
@@ -166,3 +167,5 @@ export default function Precos() {
 		</>
 	)
 }
+
+export default memo(Precos)

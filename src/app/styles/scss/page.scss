@@ -1,0 +1,107 @@
+/*
+####################################################
+PAGES
+####################################################
+*/
+
+@use "tailwindcss";
+@use './variables.scss';
+
+.page {
+    min-height: 100vh;
+    padding: 50px 15px;
+    text-align: center;
+
+    h2 {
+        display: flex;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+
+        svg {
+            margin-right: 15px;
+        }
+    }
+
+    .box {
+        width: 100%;
+        margin: 50px auto;
+        overflow: auto;
+
+        .row {
+            border-bottom: 1px solid variables.$patternColor4;
+
+            &:first-child {
+                border-bottom: 2px solid variables.$patternColor1;
+
+                .info {
+                    font-size: 1.3rem;
+                    color: variables.$patternColor1;
+
+                    span {
+                        align-items: flex-end;
+                    }
+                }
+
+                .inclusive {
+                    border-top-left-radius: 12px;
+                    border-top-right-radius: 12px;
+                }
+
+                .price {
+                    font-size: 1.3rem;
+                }
+            }
+
+            &:last-child {
+                border: 0 none;
+
+                .inclusive {
+                    border-bottom-left-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                }
+            }
+        }
+    }
+    
+    .resources {
+        width: 980px;
+        margin: 0 auto;
+        font-weight: 400;
+    }
+
+    .flex {
+        padding: 30px 0;
+
+        span {
+            display: flex;
+            align-items: center;
+            align-self: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .info {
+        span {
+            justify-content: start;
+            text-align: left;
+            padding-right: 30px;
+        }
+    }
+
+    .inclusive {
+        background-color: variables.$patternColor3;
+        font-weight: 600;
+        color: variables.$patternColor1;
+    }
+
+    .price {
+        span {
+            justify-content: end;
+            text-align: right;
+            padding-left: 30px;
+        }
+    }
+}

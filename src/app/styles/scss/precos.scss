@@ -1,0 +1,172 @@
+/*
+####################################################
+PREÇOS
+####################################################
+*/
+
+@use "tailwindcss";
+@use './variables.scss';
+
+.precos {
+    min-height: 100vh;
+    padding: 50px 15px;
+    text-align: center;
+    position: relative;
+
+    .cta {
+        font-size: .9rem;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+
+        @media screen {
+            @media (min-width: 640px) {
+                width: 90%;
+                position: absolute;
+                bottom: 20px;
+                left: 5%;
+            }
+        }
+    }
+
+    .video {
+        display: flex;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        text-align: center;
+        width: max-content;
+        height: 100px;
+        margin: 50px auto;
+
+        .text {
+            font-size: 1.25rem;
+            font-weight: 400;
+
+            @media screen {
+                @media (max-width: 640px) {
+                    font-size: .85rem;
+                }
+            }
+        }
+    }
+
+    .box {
+        width: 100%;
+        max-width: 1200px;
+        margin: 50px auto;
+    }
+
+    .flex {
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    .stripe {
+        border-radius: 30px;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$patternColor1;
+        color: variables.$white;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        span {
+            padding: 15px 0;
+            display: block;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: .9rem;
+            color: variables.$white;
+        }
+    }
+
+    .content {
+        @media (min-width: 640px) {
+            min-height: 600px;
+        }
+    }
+
+    .available {
+        .content {
+            border: 1px solid variables.$patternColor1;
+            margin-top: 50px;
+        }
+    }
+
+    .area {
+        background-color: variables.$patternColor5;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        border-radius: 30px;
+        position: relative;
+    }
+
+    .content {
+        background-color: variables.$patternColor5;
+        border: 1px solid variables.$patternColor5;
+        width: 100%;
+        padding: 30px 20px;
+        border-radius: 30px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .monetary {
+        font-weight: 400;
+        font-size: 1.1rem;
+    }
+
+    .value {
+        font-size: 2.6rem;
+        font-weight: 400;
+    }
+
+    .recurrence {
+        text-transform: uppercase;
+        color: variables.$patternColor6;
+        font-weight: 500;
+        font-size: 1.3em;
+    }
+
+    p {
+        text-align: center;
+        margin: 10px auto;
+        font-size: .8rem;
+    }
+
+    ul {
+        font-size: .8rem;
+        margin: 20px auto;
+
+        @media screen {
+            @media (min-width: 640px) {
+                min-height: 280px;
+                padding-bottom: 50px;
+            }
+        }
+
+        li {
+            display: flex;
+            align-items: self-start;
+            align-self: center;
+            justify-content: start;
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        span {
+            width: 20px;
+            text-align: center;
+            margin-right: 20px;
+            padding-top: 4px;
+
+            img, svg {
+                margin: auto;
+            }
+        }
+    }
+}

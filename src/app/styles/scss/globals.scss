@@ -1,0 +1,110 @@
+/*
+####################################################
+GLOBALS
+####################################################
+*/
+
+@use "tailwindcss";
+@use "./variables.scss";
+
+body {
+	font-family: var(--font-inter);
+	font-size: 1.12rem;
+	letter-spacing: 0.015rem;
+	font-weight: 300;
+	line-height: 1.6rem;
+}
+
+h1, h2, h3 {
+	font-family: var(--font-poppins);
+	overflow-wrap: break-word;
+}
+
+h1 {
+	font-size: 2.6rem;
+	font-weight: 400;
+	line-height: 3rem;
+
+	@media screen {
+		@media (max-width: 640px) {
+			font-size: 1.8rem;
+			line-height: 2.2rem;
+		}
+	}
+}
+
+h2 {
+	font-size: 1.7rem;
+	font-weight: 400;
+
+	@media screen {
+		@media (max-width: 640px) {
+			font-size: 1.3rem;
+			line-height: 1.8rem;
+			text-align: left;
+		}
+	}
+}
+
+h3 {
+	font-size: 2.2rem;
+	font-weight: 400;
+
+	@media screen {
+		@media (max-width: 640px) {
+			font-size: 1.3rem;
+			line-height: 1.4rem;
+		}
+	}
+}
+
+h1, h2, h3 {
+	span {
+		color: variables.$patternColor1;
+	}
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+.cta {
+	padding: 20px 50px;
+	display: flex;
+	align-items: center;
+	align-self: center;
+	justify-content: center;
+	margin: 50px auto;
+	background-color: variables.$patternColor2;
+	border: 1px solid variables.$patternColor2;
+	color: variables.$white;
+	font-weight: 400;
+	border-radius: 60px;
+	cursor: pointer;
+	width: max-content;
+	transition: all .3s ease-in-out;
+
+	&:hover {
+		background-color: transparent;
+		border: 1px solid variables.$patternColor2;
+		color: variables.$patternColor2;
+	}
+
+	&.type-2 {
+		background-color: transparent;
+		border: 1px solid variables.$patternColor2;
+		color: variables.$patternColor2;
+
+		&:hover {
+			background-color: variables.$patternColor2;
+			border: 1px solid variables.$patternColor2;
+			color: variables.$white;
+		}
+	}
+}
+
+.overline {
+	text-decoration: line-through;
+	color: variables.$patternColor7;
+	font-weight: 400;
+}
